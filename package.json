@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha",
     "preinstall": "npm install coffee-script",
-    "install": "node_modules/.bin/cake dist"
+    "install": "node_modules/.bin/cake dist",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",

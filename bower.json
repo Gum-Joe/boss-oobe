@@ -1,0 +1,26 @@
+{
+  "name": "Web-OS-oobe",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Gum-Joe/Web-OS-oobe",
+  "authors": [
+    "Gum-Joe <kishansambhi@hotmail.co.uk>"
+  ],
+  "description": "Oobe configure for Web-OS",
+  "main": "app.js",
+  "keywords": [
+    "web",
+    "os",
+    "oobe"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
