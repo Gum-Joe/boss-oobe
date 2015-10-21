@@ -1,0 +1,19 @@
+// Source
+@import "mixins";
+$auto : auto;
+
+.middleweb {
+  margin-left: $auto;
+  margin-right: $auto;
+  margin-top: 25%;
+  text-align: center;
+  .progress {
+    width: 10cm;
+    @include auto;
+  }
+}
+
+html, body {
+  background-color: #3757bf;
+  color: white;
+}
