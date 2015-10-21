@@ -1,0 +1,32 @@
+{
+  "name": "web-os-oobe",
+  "version": "1.0.0",
+  "description": "oobe configure module for web-os",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "preinstall": "npm install coffee-script",
+    "install": "node_modules/.bin/cake dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gum-Joe/Web-OS-oobe.git"
+  },
+  "keywords": [
+    "web",
+    "os",
+    "oobe",
+    "js",
+    "coffee",
+    "script"
+  ],
+  "author": "Gum-Joe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gum-Joe/Web-OS-oobe/issues"
+  },
+  "homepage": "https://github.com/Gum-Joe/Web-OS-oobe#readme",
+  "dependencies": {
+    "pem": "^1.8.1"
+  }
+}
