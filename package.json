@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/Gum-Joe/Web-OS-oobe#readme",
   "dependencies": {
+    "delayed": "^1.0.1",
     "pem": "^1.8.1"
   }
 }

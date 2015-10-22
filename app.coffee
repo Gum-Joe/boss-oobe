@@ -1,5 +1,8 @@
 # require
 checks = require './libs/checks.js'
+{spawn} = require 'child_process'
+{delay} = require 'delayed'
+setup = require './libs/setup.js'
 
 setup = (root) ->
   # body...
@@ -30,7 +33,12 @@ app.on 'ready', ->
   # and load the index.html of the app.
   mainWindow.loadUrl 'file://' + __dirname + '/views/index.html'
   # Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  # mainWindow.webContents.openDevTools()
+  # setup
+  setup.begin('gui', mainWindow)
+
+
+
   # Emitted when the window is closed.
   mainWindow.on 'closed', ->
     # Dereference the window object, usually you would store windows
