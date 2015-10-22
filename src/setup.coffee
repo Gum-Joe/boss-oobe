@@ -1,10 +1,13 @@
 fs = require 'fs'
-dir = require './mkdir.js'
+#dir = require '../mkdir.js'
 {execSync} = require 'child_process'
+mkdir = require '../build/Release/mkdir'
 
 
 # Setup module for web-os
-exports.begin = (type, main) ->
+begin = (type, main) ->
   # body...
   # Create dirs
-  execSync 'mkdir .web/test'
+  console.log mkdir.mkdir()
+
+begin()
