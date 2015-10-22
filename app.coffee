@@ -2,7 +2,7 @@
 checks = require './libs/checks.js'
 {spawn} = require 'child_process'
 {delay} = require 'delayed'
-setup = require './libs/setup.js'
+{begin} = require './libs/setup.js'
 
 setup = (root) ->
   # body...
@@ -35,7 +35,7 @@ app.on 'ready', ->
   # Open the DevTools.
   # mainWindow.webContents.openDevTools()
   # setup
-  setup.begin('gui', mainWindow)
+  begin('gui', mainWindow)
 
 
 

@@ -2,9 +2,6 @@
 fs = require 'fs'
 {execSync} = require 'child_process'
 
-exports.mkdirs = (dir) ->
+exports.mkdir = (dir) ->
   # body...
-  i = 0
-  while i < dir.length
-    execSync 'mkdir '+dir[i]
-    i++
+  execSync 'mkdir -p .web/test'
