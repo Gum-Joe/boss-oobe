@@ -6,7 +6,7 @@
     },
     {
       "target_name": "mkdir-windows",
-      "sources": [ "cplus/mkdir_windows.cc", "cplus/mkdir-windows.h" ]
+      "sources": [ "cplus/mkdir_windows.cc" ]
     }
   ]
 }
