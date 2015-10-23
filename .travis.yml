@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '0.12'
+- '0.11'
+- '0.10'
+- stable
+os:
+- linux
+services:
+- mongodb
+env:
+- NODE_ENV=development
+install:
+- npm install
+script: make ci
