@@ -19,9 +19,14 @@ using convert::convertToStringV8;
 
 void Mkdir(const FunctionCallbackInfo<Value>& args) {
   Isolate* isolate = args.GetIsolate();
-  const char *dir = convert::convertToStringV8(args[0]);
+  // get the param
+  v8::String::Utf8Value param1(args[0]->ToString());
+    // convert it to string
+  std::string foo = std::string(*param1);
+  const char *dir = foo.c_str();
+  const char *out = foo.c_str();
   mkdirs(dir);
-  args.GetReturnValue().Set(String::NewFromUtf8(isolate, "Done."));
+  args.GetReturnValue().Set(String::NewFromUtf8(isolate, "Created dir."));
 }
 
 void initbash(Local<Object> exports) {

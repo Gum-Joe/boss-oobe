@@ -17,7 +17,7 @@ namespace convert {
       // convert it to string
     std::string foo = std::string(*param1);
     const char *dir = foo.c_str();
-    return dir;
+    printf(foo.c_str());
   }
 
 } /* mkdirp */
