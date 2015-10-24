@@ -1,7 +1,7 @@
 fs = require 'fs'
 #dir = require '../mkdir.js'
 {execSync} = require 'child_process'
-mkdir = require '../build/Release/mkdir-windows'
+mkdir = require '../build/Release/mkdir'
 
 
 # Setup module for web-os

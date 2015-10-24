@@ -4,7 +4,7 @@
 #include <string.h>
 //#include "mkdir-linux.h"
 
-namespace mkdirp {
+namespace mkdirbash {
 
 using v8::FunctionCallbackInfo;
 using v8::Isolate;
@@ -22,15 +22,10 @@ void Mkdir(const FunctionCallbackInfo<Value>& args) {
   args.GetReturnValue().Set(String::NewFromUtf8(isolate, "Done."));
 }
 
-void init(Local<Object> exports) {
+void initbash(Local<Object> exports) {
   NODE_SET_METHOD(exports, "mkdir", Mkdir);
 }
 
-NODE_MODULE(addon, init)
+NODE_MODULE(mkdirbash, initbash)
 
 }  // namespace demo
-    int main()
-    {
-          mkdir("c:/myfolder");
-          return 0;
-    }

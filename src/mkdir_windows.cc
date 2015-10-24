@@ -13,7 +13,7 @@ using v8::Object;
 using v8::String;
 using v8::Value;
 
-void Mkdir(const FunctionCallbackInfo<Value>& args) {
+void Mkc(const FunctionCallbackInfo<Value>& args) {
   Isolate* isolate = args.GetIsolate();
   const char *env = getenv("HOMEPATH");
   char *drive = getenv("SystemDrive");
@@ -24,10 +24,10 @@ void Mkdir(const FunctionCallbackInfo<Value>& args) {
   args.GetReturnValue().Set(String::NewFromUtf8(isolate, "Done."));
 }
 
-void init(Local<Object> exports) {
-  NODE_SET_METHOD(exports, "mkdir", Mkdir);
+void initcmd(Local<Object> exports) {
+  NODE_SET_METHOD(exports, "mk", Mkc);
 }
 
-NODE_MODULE(addon, init)
+NODE_MODULE(mkdirp, initcmd)
 
 }  // namespace demo
