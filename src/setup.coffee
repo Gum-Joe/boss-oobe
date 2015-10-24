@@ -8,6 +8,6 @@ mkdir = require '../build/Release/mkdir'
 begin = (type, main) ->
   # body...
   # Create dirs
-  console.log mkdir.mkdir()
+  console.log mkdir.mkdir(".web")
 
 begin()
