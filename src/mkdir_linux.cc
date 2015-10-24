@@ -30,8 +30,3 @@ void init(Local<Object> exports) {
 NODE_MODULE(mkdirlinux, init)
 
 }  // namespace demo
-    int main()
-    {
-          mkdir("c:/myfolder");
-          return 0;
-    }
