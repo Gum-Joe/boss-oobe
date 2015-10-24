@@ -2,6 +2,6 @@
   "targets": [
     {
       "target_name": "mkdir-h",
-      "sources": ["cplus/windows/mkdir-windows.cc", "cplus/windows/mkdir-bash.cc"]
+      "sources": ["src/mkdir_windows.cc", "src/mkdir_bash.cc"]
     }
 ]}
