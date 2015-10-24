@@ -2,7 +2,7 @@
 #include <direct.h>
 #include <stdlib.h>
 #include <string.h>
-//#include "mkdir-linux.h"
+#include "mkdir_windows_bash.h"
 
 namespace mkdirbash {
 
@@ -15,10 +15,7 @@ using v8::Value;
 
 void Mkdir(const FunctionCallbackInfo<Value>& args) {
   Isolate* isolate = args.GetIsolate();
-  char *env = getenv("HOME");
-  const char *dir = "/web";
-  const char *home = strcat(env, dir);
-  mkdir(home);
+  mkdirs(".web");
   args.GetReturnValue().Set(String::NewFromUtf8(isolate, "Done."));
 }
 
