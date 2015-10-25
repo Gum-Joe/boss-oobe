@@ -3,8 +3,7 @@
 #include <string.h>
 //#include "mkdir-linux.h"
 
-namespace mkdirbash {
-
+namespace tools {
 void mkdirs(const char *dir) {
   char *env = getenv("HOME");
   const char *stroke = "/";

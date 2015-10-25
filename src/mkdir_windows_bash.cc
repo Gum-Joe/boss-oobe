@@ -1,10 +1,9 @@
 #include <node.h>
 #include <direct.h>
 #include <stdlib.h>
-#include <string>
 #include <iostream>
-//#include <string.h>
-#include "mkdir_windows_bash.h"
+#include <string.h>
+#include "tools_windows_bash.h"
 #include "convert.h"
 
 namespace mkdirbash {
@@ -15,7 +14,7 @@ using v8::Local;
 using v8::Object;
 using v8::String;
 using v8::Value;
-using convert::convertToStringV8;
+using tools::mkdirs;
 
 void Mkdir(const FunctionCallbackInfo<Value>& args) {
   Isolate* isolate = args.GetIsolate();
@@ -24,9 +23,9 @@ void Mkdir(const FunctionCallbackInfo<Value>& args) {
     // convert it to string
   std::string foo = std::string(*param1);
   const char *dir = foo.c_str();
-  const char *out = foo.c_str();
-  mkdirs(dir);
-  args.GetReturnValue().Set(String::NewFromUtf8(isolate, "Created dir."));
+  const char *out = convertToStringV8(args);
+  tools::mkdirs(dir);
+  args.GetReturnValue().Set(String::NewFromUtf8(isolate, "created dir"));
 }
 
 void initbash(Local<Object> exports) {
