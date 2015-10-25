@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <string.h>
-#include "tools_windows_bash.h"
+#include "mkdir_windows_bash.h"
 #include "convert.h"
 
 namespace mkdirbash {
@@ -14,7 +14,6 @@ using v8::Local;
 using v8::Object;
 using v8::String;
 using v8::Value;
-using tools::mkdirs;
 
 void Mkdir(const FunctionCallbackInfo<Value>& args) {
   Isolate* isolate = args.GetIsolate();
@@ -23,9 +22,8 @@ void Mkdir(const FunctionCallbackInfo<Value>& args) {
     // convert it to string
   std::string foo = std::string(*param1);
   const char *dir = foo.c_str();
-  const char *out = convertToStringV8(args);
-  tools::mkdirs(dir);
-  args.GetReturnValue().Set(String::NewFromUtf8(isolate, "created dir"));
+  mkdirs(dir);
+  args.GetReturnValue().Set(String::NewFromUtf8(isolate, " dir created"));
 }
 
 void initbash(Local<Object> exports) {
