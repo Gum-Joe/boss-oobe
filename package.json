@@ -1,7 +1,7 @@
 {
-  "name": "web-os-oobe",
+  "name": "boss-oobe",
   "version": "1.0.0",
-  "description": "oobe configure module for web-os",
+  "description": "oobe configure module for boss",
   "main": "app.js",
   "scripts": {
     "test": "mocha",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gum-Joe/Web-OS-oobe.git"
+    "url": "git+https://github.com/Gum-Joe/boss-oobe.git"
   },
   "keywords": [
     "web",
@@ -24,9 +24,9 @@
   "author": "Gum-Joe",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Gum-Joe/Web-OS-oobe/issues"
+    "url": "https://github.com/Gum-Joe/boss-oobe/issues"
   },
-  "homepage": "https://github.com/Gum-Joe/Web-OS-oobe#readme",
+  "homepage": "https://github.com/Gum-Joe/boss-oobe#readme",
   "dependencies": {
     "delayed": "^1.0.1",
     "pem": "^1.8.1"
